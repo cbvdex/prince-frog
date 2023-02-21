@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Assessment_Report">
+
+        <LinearLayout
+            android:id="@+id/topContentAssessReport"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#6D00BCD4"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topInnerConstraint1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/pageTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="100dp"
+                    android:text="Assessment Report"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mainContentTextAssessReport"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:background="#00000000"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topContentAssessReport"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="400dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/mainMsg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Hi Chloe, Right on! You're doing truely amazing!"
+                    android:textColor="#E91E63"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/assessReportTopic1"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Positive impact in my life\nfrom those experience."
+                    android:textColor="#673AB7"
+                    app:layout_constraintStart_toStartOf="@+id/mainMsg"
+                    app:layout_constraintTop_toBottomOf="@+id/mainMsg" />
+
+                <TextView
+                    android:id="@+id/txtAssessTopicResult1"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Not Available Yet"
+                    app:layout_constraintEnd_toEndOf="@+id/assessReportTopic1"
+                    app:layout_constraintStart_toStartOf="@+id/assessReportTopic1"
+                    app:layout_constraintTop_toBottomOf="@+id/assessReportTopic1" />
+
+                <TextView
+                    android:id="@+id/assessReportTopic2"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="What made me feel \nthe best in relationships."
+                    android:textColor="#673AB7"
+                    app:layout_constraintEnd_toEndOf="@+id/txtAssessTopicResult1"
+                    app:layout_constraintStart_toStartOf="@+id/assessReportTopic1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtAssessTopicResult1" />
+
+                <TextView
+                    android:id="@+id/txtAssessTopicResult2"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Not Available Yet"
+                    app:layout_constraintEnd_toEndOf="@+id/assessReportTopic2"
+                    app:layout_constraintStart_toStartOf="@+id/assessReportTopic2"
+                    app:layout_constraintTop_toBottomOf="@+id/assessReportTopic2" />
+
+                <TextView
+                    android:id="@+id/assessReportTopic3"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="The most important \nfactors in relationship"
+                    android:textColor="#3F51B5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/assessReportTopic1" />
+
+                <TextView
+                    android:id="@+id/assessReportTopic4"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="I tend to fall for\nthe wrong things"
+                    android:textColor="#3F51B5"
+                    app:layout_constraintEnd_toEndOf="@+id/txtAssessTopicResult3"
+                    app:layout_constraintStart_toStartOf="@+id/assessReportTopic3"
+                    app:layout_constraintTop_toBottomOf="@+id/txtAssessTopicResult3" />
+
+                <View
+                    android:id="@+id/assessRepDiv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintBottom_toTopOf="@+id/assessReportTopic1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mainMsg" />
+
+                <View
+                    android:id="@+id/assessRepVertDiv1"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/assessReportTopic3"
+                    app:layout_constraintStart_toEndOf="@+id/assessReportTopic1"
+                    app:layout_constraintTop_toBottomOf="@+id/assessRepDiv1" />
+
+                <TextView
+                    android:id="@+id/txtAssessTopicResult3"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Not Available Yet"
+                    app:layout_constraintEnd_toEndOf="@+id/assessReportTopic3"
+                    app:layout_constraintStart_toStartOf="@+id/assessReportTopic3"
+                    app:layout_constraintTop_toBottomOf="@+id/assessReportTopic3" />
+
+                <TextView
+                    android:id="@+id/txtAssessTopicResult4"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Not Available Yet"
+                    app:layout_constraintEnd_toEndOf="@+id/assessReportTopic4"
+                    app:layout_constraintStart_toStartOf="@+id/assessReportTopic4"
+                    app:layout_constraintTop_toBottomOf="@+id/assessReportTopic4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomContentAssessReport"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="#7E00BCD4"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainContentTextAssessReport"
+        app:layout_constraintVertical_bias="0.0" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dashBottomInner1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pageTitle">
+
+            <Button
+                android:id="@+id/navDash"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:onClick="gotoDashboard"
+                android:text="Back to\nDashboard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/navAvList"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:onClick="gotoAvaList"
+                android:text="Avatar List"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/navViewAss"
+                app:layout_constraintStart_toEndOf="@+id/navDash"
+                app:layout_constraintTop_toTopOf="@+id/navDash" />
+
+            <Button
+                android:id="@+id/navViewAss"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:onClick="gotoCreateAvatar"
+                android:text="Create\nAvatar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/navAvList" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

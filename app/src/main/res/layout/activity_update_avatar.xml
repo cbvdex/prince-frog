@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.UpdateAvatar">
+
+    <LinearLayout
+        android:id="@+id/updateTopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6D00BCD4"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lblUpdateTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Update Avatar"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/updateMainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/updateTopLayout">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/lblUpdateTop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="You can update or delete this avatar!"
+                    android:textColor="#E91E63"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/lblUpdateCategory1"
+                    android:layout_width="144dp"
+                    android:layout_height="23dp"
+                    android:layout_marginStart="16dp"
+                    android:text="Reminder Information"
+                    android:textColor="#673AB7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblUpdateTop" />
+
+                <TextView
+                    android:id="@+id/lblUpdateNickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Nickname:"
+                    app:layout_constraintStart_toStartOf="@+id/lblUpdateCategory1"
+                    app:layout_constraintTop_toBottomOf="@+id/lblUpdateCategory1" />
+
+                <TextView
+                    android:id="@+id/lblUpdatePhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Phone #: \n(optional)"
+                    app:layout_constraintStart_toStartOf="@+id/lblUpdateNickname"
+                    app:layout_constraintTop_toBottomOf="@+id/lblUpdateNickname" />
+
+                <TextView
+                    android:id="@+id/lblUpdateAid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Memory Aid (hint):"
+                    app:layout_constraintStart_toStartOf="@+id/lblUpdatePhone"
+                    app:layout_constraintTop_toBottomOf="@+id/lblUpdatePhone" />
+
+                <EditText
+                    android:id="@+id/txtUpdateNickname"
+                    android:layout_width="213dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="[Nick name]"
+                    app:layout_constraintBottom_toBottomOf="@+id/lblUpdateNickname"
+                    app:layout_constraintStart_toEndOf="@+id/lblUpdateNickname"
+                    app:layout_constraintTop_toBottomOf="@+id/lblUpdateCategory1" />
+
+                <EditText
+                    android:id="@+id/txtUpdatePhone"
+                    android:layout_width="170dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="8dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="[Phone #]"
+                    app:layout_constraintBottom_toBottomOf="@+id/lblUpdatePhone"
+                    app:layout_constraintStart_toEndOf="@+id/lblUpdatePhone" />
+
+                <Button
+                    android:id="@+id/btnUpdateFindPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:onClick="selectPhone"
+                    android:text="Phone #\nSearch"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtUpdatePhone"
+                    app:layout_constraintStart_toEndOf="@+id/txtUpdatePhone" />
+
+                <EditText
+                    android:id="@+id/txtUpdateAid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="[Memory Aid]"
+                    app:layout_constraintStart_toEndOf="@+id/lblUpdateAid"
+                    app:layout_constraintTop_toTopOf="@+id/lblUpdateAid" />
+
+                <TextView
+                    android:id="@+id/lblUpdateReminderImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Reminder Image (optional):"
+                    android:textColor="#673AB7"
+                    app:layout_constraintStart_toStartOf="@+id/lblUpdateCategory1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtUpdateAid" />
+
+                <ImageView
+                    android:id="@+id/imgUpdate"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="@+id/lblUpdateReminderImage"
+                    app:layout_constraintTop_toBottomOf="@+id/lblUpdateReminderImage"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <Button
+                    android:id="@+id/btnUpdateSelectPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:onClick="selectPhoto"
+                    android:text="Select \nphoto"
+                    app:layout_constraintStart_toEndOf="@+id/imgUpdate"
+                    app:layout_constraintTop_toTopOf="@+id/imgUpdate" />
+
+                <TextView
+                    android:id="@+id/lblUpdateGuide"
+                    android:layout_width="190dp"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="8dp"
+                    android:text="You can select any image \nwhich helps you recall \nthe person."
+                    app:layout_constraintStart_toEndOf="@+id/btnUpdateSelectPhoto"
+                    app:layout_constraintTop_toTopOf="@+id/btnUpdateSelectPhoto" />
+
+                <Button
+                    android:id="@+id/btnUpdateSaveOnly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:onClick="saveChangeOnly"
+                    android:text="Save \nChange Only"
+                    app:layout_constraintStart_toStartOf="@+id/imgUpdate"
+                    app:layout_constraintTop_toBottomOf="@+id/imgUpdate" />
+
+                <Button
+                    android:id="@+id/btnUpdateDeleteAvatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:onClick="deleteAvatar"
+                    android:text="Delete\n Avatar"
+                    app:layout_constraintStart_toEndOf="@+id/btnUpdateSaveOnly"
+                    app:layout_constraintTop_toTopOf="@+id/btnUpdateSaveOnly" />
+
+                <Button
+                    android:id="@+id/btnUpdateSaveTakeQuiz"
+                    android:layout_width="150dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="#8800BCD4"
+                    android:onClick="saveChangeFinishQuiz"
+                    android:text="Save Change, \nTake Next Quiz"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnUpdateDeleteAvatar"
+                    app:layout_constraintTop_toTopOf="@+id/btnUpdateDeleteAvatar" />
+
+                <TextView
+                    android:id="@+id/txtUpdateAvaPhotoLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Photo Link"
+                    app:layout_constraintStart_toStartOf="@+id/btnUpdateSelectPhoto"
+                    app:layout_constraintTop_toBottomOf="@+id/btnUpdateSelectPhoto" />
+
+                <TextView
+                    android:id="@+id/txtUpdateAvaMessage"
+                    android:layout_width="218dp"
+                    android:layout_height="23dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#F44336"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/lblUpdateCategory1"
+                    app:layout_constraintTop_toBottomOf="@+id/lblUpdateTop" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/updateBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6D00BCD4"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/updateMainLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/navUpdateOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:onClick="gotoAvaList"
+                android:text="Cancel, \nBack to List"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/navUpdateTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:onClick="gotoDashboard"
+                android:text="Go to\nDashboard"
+                app:layout_constraintStart_toEndOf="@+id/navUpdateOne"
+                app:layout_constraintTop_toTopOf="@+id/navUpdateOne" />
+
+            <Button
+                android:id="@+id/btnUpdateThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:onClick="gotoAllAssess"
+                android:text="View all\nAssessment"
+                app:layout_constraintStart_toEndOf="@+id/navUpdateTwo"
+                app:layout_constraintTop_toTopOf="@+id/navUpdateTwo" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
