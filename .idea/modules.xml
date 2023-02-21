@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/FrogPrince.iml" filepath="$PROJECT_DIR$/.idea/FrogPrince.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FrogPrince.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FrogPrince.app.iml" />
+    </modules>
+  </component>
+</project>

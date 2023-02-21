@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/blankFragment">
+
+    <fragment
+        android:id="@+id/positiveFragment"
+        android:name="com.example.frogprince.ui.PositiveQuestionFragment"
+        android:label="positiveFragment"
+        tools:layout="@layout/fragment_positive_question" >
+        <action
+            android:id="@+id/action_positiveFragment_to_negativeFragment"
+            app:destination="@id/negativeFragment" />
+        <action
+            android:id="@+id/action_positiveFragment_to_blankFragment"
+            app:destination="@id/blankFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/negativeFragment"
+        android:name="com.example.frogprince.ui.NegativeQuestionFragment"
+        android:label="negativeFragment"
+        tools:layout="@layout/fragment_negative_question" >
+        <action
+            android:id="@+id/action_negativeFragment_to_positiveFragment"
+            app:destination="@id/positiveFragment" />
+        <action
+            android:id="@+id/action_negativeFragment_to_blankFragment"
+            app:destination="@id/blankFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.example.frogprince.ui.BlankQuizFragment"
+        android:label="blankFragment"
+        tools:layout="@layout/fragment_blank_quiz" >
+        <action
+            android:id="@+id/action_blankFragment_to_positiveFragment"
+            app:destination="@id/positiveFragment" />
+        <action
+            android:id="@+id/action_blankFragment_to_negativeFragment"
+            app:destination="@id/negativeFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Dashboard">
+
+    <LinearLayout
+        android:id="@+id/topContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#6D00BCD4"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topInnerConstraint1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/pageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="100dp"
+                android:text="Dashboard"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dashTopInner1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pageTitle">
+
+                <Button
+                    android:id="@+id/goToInitializeApp"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#88E91E63"
+                    android:onClick="initializeApp"
+                    android:text="Initialize \nApplication"
+                    app:layout_constraintEnd_toStartOf="@+id/navFinishPendingAssess"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/navFinishPendingAssess"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:onClick="gotoFinishAssessment"
+                    android:text="Pending \nAssessment"
+                    app:layout_constraintStart_toEndOf="@+id/goToInitializeApp"
+                    app:layout_constraintTop_toTopOf="@+id/goToInitializeApp" />
+
+                <Button
+                    android:id="@+id/navUserInfoUpdate"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#81FFEB3B"
+                    android:onClick="gotoUserInfoUpdate"
+                    android:text="User Info\nUpdate"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/navFinishPendingAssess"
+                    app:layout_constraintTop_toTopOf="@+id/navFinishPendingAssess" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mainContentText"
+        android:layout_width="0dp"
+        android:layout_height="340dp"
+        android:layout_marginStart="1dp"
+        android:background="#00000000"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topContent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtMessage"
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="#F44336"
+                android:textColorHighlight="#F44336"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mainContentMsg" />
+
+            <TextView
+                android:id="@+id/mainContentMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="100dp"
+                android:text="Quick Insight and Tips!"
+                android:textColor="#E91E63"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dashBoardGreeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Hi,"
+                android:textColor="#673AB7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mainContentMsg" />
+
+            <TextView
+                android:id="@+id/dashBoardTopic1"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Insight"
+                android:textColor="#FF5722"
+                app:layout_constraintStart_toStartOf="@+id/dashBoardGreeting"
+                app:layout_constraintTop_toBottomOf="@+id/dashBoardGreeting" />
+
+            <TextView
+                android:id="@+id/dashBoardTopic2"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Insight"
+                android:textColor="#FF5722"
+                app:layout_constraintStart_toStartOf="@+id/dashBoardTopic1"
+                app:layout_constraintTop_toBottomOf="@+id/dashBoardTopicAns1" />
+
+            <TextView
+                android:id="@+id/dashBoardTopic3"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Insight"
+                android:textColor="#FF5722"
+                app:layout_constraintStart_toStartOf="@+id/dashBoardTopic2"
+                app:layout_constraintTop_toBottomOf="@+id/dashBoardTopicAns2" />
+
+            <TextView
+                android:id="@+id/dashBoardTopicAns1"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="8dp"
+                android:text="Available After Taking Quiz"
+                app:layout_constraintStart_toStartOf="@+id/dashBoardTopic1"
+                app:layout_constraintTop_toBottomOf="@+id/dashBoardTopic1" />
+
+            <TextView
+                android:id="@+id/dashBoardTopicAns2"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="8dp"
+                android:text="Available After Taking Quiz"
+                app:layout_constraintStart_toStartOf="@+id/dashBoardTopic2"
+                app:layout_constraintTop_toBottomOf="@+id/dashBoardTopic2" />
+
+            <TextView
+                android:id="@+id/dashBoardTopicAns3"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="8dp"
+                android:text="Available After Taking Quiz"
+                app:layout_constraintStart_toStartOf="@+id/dashBoardTopic3"
+                app:layout_constraintTop_toBottomOf="@+id/dashBoardTopic3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="#7E00BCD4"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainContentText"
+        app:layout_constraintVertical_bias="0.0" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dashBottomInner1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pageTitle">
+
+            <Button
+                android:id="@+id/navDashCreateAvatar"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:onClick="goToCreateAvatar"
+                android:paddingEnd="5dp"
+                android:text="Create \nAvatar"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toStartOf="@+id/navManageAvatar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/navManageAvatar"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"
+                android:onClick="gotoManageAvatars"
+                android:text="View \nAvatars List"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toStartOf="@+id/navViewAllAnalysis"
+                app:layout_constraintStart_toEndOf="@+id/navDashCreateAvatar"
+                app:layout_constraintTop_toTopOf="@+id/navDashCreateAvatar" />
+
+            <Button
+                android:id="@+id/navViewAllAnalysis"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"
+                android:onClick="gotoViewAnalysis"
+                android:text="View All\nAnalysis"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/navManageAvatar"
+                app:layout_constraintTop_toTopOf="@+id/navManageAvatar" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

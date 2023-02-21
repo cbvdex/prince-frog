@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ViewAvatar">
+
+    <LinearLayout
+        android:id="@+id/viewTopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6D00BCD4"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lblViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="View Avatar"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewMainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/viewTopLayout">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/lblViewTop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:shadowColor="#E91E63"
+                    android:text="My time with [Teddy Bear]!"
+                    android:textColor="#E91E63"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/lblViewCategory1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:text="Information"
+                    android:textColor="#673AB7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblViewTop" />
+
+                <TextView
+                    android:id="@+id/lblAssessStage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Assessment Stage:"
+                    app:layout_constraintStart_toStartOf="@+id/lblViewCategory1"
+                    app:layout_constraintTop_toBottomOf="@+id/lblViewCategory1" />
+
+                <TextView
+                    android:id="@+id/lblViewPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Phone #: (Optional)"
+                    app:layout_constraintEnd_toEndOf="@+id/lblAssessStage"
+                    app:layout_constraintTop_toBottomOf="@+id/lblAssessStage" />
+
+                <TextView
+                    android:id="@+id/lblViewAid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Memory Aid (hint):"
+                    app:layout_constraintStart_toStartOf="@+id/lblViewPhone"
+                    app:layout_constraintTop_toBottomOf="@+id/lblViewPhone" />
+
+                <TextView
+                    android:id="@+id/txtViewAssessmentStage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="[Stage]"
+                    app:layout_constraintStart_toEndOf="@+id/lblAssessStage"
+                    app:layout_constraintTop_toTopOf="@+id/lblAssessStage" />
+
+                <TextView
+                    android:id="@+id/txtViewPhone"
+                    android:layout_width="124dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="8dp"
+                    android:text="[Phone Number]"
+                    app:layout_constraintStart_toEndOf="@+id/lblViewPhone"
+                    app:layout_constraintTop_toTopOf="@+id/lblViewPhone" />
+
+                <TextView
+                    android:id="@+id/txtViewAid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="[Met in Library]"
+                    app:layout_constraintStart_toEndOf="@+id/lblViewAid"
+                    app:layout_constraintTop_toTopOf="@+id/lblViewAid" />
+
+                <TextView
+                    android:id="@+id/lblViewCategory2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Reflection Library"
+                    android:textColor="#673AB7"
+                    app:layout_constraintStart_toStartOf="@+id/lblViewCategory1"
+                    app:layout_constraintTop_toBottomOf="@+id/lblViewAid" />
+
+                <ImageView
+                    android:id="@+id/imgView"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtViewPhone"
+                    app:layout_constraintTop_toTopOf="@+id/lblViewCategory1"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/lblViewTopic1"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="We had great time when ..."
+                    android:textColor="#FF5722"
+                    app:layout_constraintStart_toStartOf="@+id/lblViewCategory2"
+                    app:layout_constraintTop_toBottomOf="@+id/lblViewCategory2" />
+
+                <TextView
+                    android:id="@+id/lblViewTopic1Ans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="this time -------------\n ---------------"
+                    app:layout_constraintStart_toStartOf="@+id/lblViewTopic1"
+                    app:layout_constraintTop_toBottomOf="@+id/lblViewTopic1" />
+
+                <TextView
+                    android:id="@+id/lblViewTopic2"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:shadowColor="#FF5722"
+                    android:text="I was drawn to \nthis person because..."
+                    android:textColor="#FF5722"
+                    app:layout_constraintStart_toStartOf="@+id/lblViewTopic1"
+                    app:layout_constraintTop_toBottomOf="@+id/lblViewTopic1Ans" />
+
+                <TextView
+                    android:id="@+id/lblViewTopic2Ans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="this time -------------\n ---------------"
+                    app:layout_constraintStart_toStartOf="@+id/lblViewTopic2"
+                    app:layout_constraintTop_toBottomOf="@+id/lblViewTopic2" />
+
+                <TextView
+                    android:id="@+id/lblViewTopic3"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="96dp"
+                    android:text="I realized something's \nwrong.."
+                    android:textColor="#FF5722"
+                    app:layout_constraintStart_toEndOf="@+id/lblViewCategory2"
+                    app:layout_constraintTop_toTopOf="@+id/lblViewTopic1" />
+
+                <TextView
+                    android:id="@+id/lblViewTopic3Ans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="this time -------------\n ---------------"
+                    app:layout_constraintStart_toStartOf="@+id/lblViewTopic3"
+                    app:layout_constraintTop_toBottomOf="@+id/lblViewTopic3" />
+
+                <TextView
+                    android:id="@+id/lblViewTopic4"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="One thing I would do\ndifferently is..."
+                    android:textColor="#FF5722"
+                    app:layout_constraintStart_toStartOf="@+id/lblViewTopic3"
+                    app:layout_constraintTop_toBottomOf="@+id/lblViewTopic3Ans" />
+
+                <TextView
+                    android:id="@+id/lblViewTopic4Ans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="this time -------------\n ---------------"
+                    app:layout_constraintStart_toStartOf="@+id/lblViewTopic4"
+                    app:layout_constraintTop_toBottomOf="@+id/lblViewTopic4" />
+
+                <Button
+                    android:id="@+id/btnNavUpdateFromView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:onClick="gotoUpdateAvatar"
+                    android:text="Update\nThis Avatar"
+                    app:layout_constraintStart_toStartOf="@+id/lblViewCategory2"
+                    app:layout_constraintTop_toBottomOf="@+id/lblViewTopic2Ans" />
+
+                <Button
+                    android:id="@+id/btnViewDeleteInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:onClick="deleteAvatar"
+                    android:text="Delete\nThis Avatar"
+                    app:layout_constraintStart_toEndOf="@+id/btnNavUpdateFromView"
+                    app:layout_constraintTop_toTopOf="@+id/btnNavUpdateFromView" />
+
+                <Button
+                    android:id="@+id/btnViewContAssess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="#8800BCD4"
+                    android:onClick="gotoAssessQuiz"
+                    android:text="Take Assess-\nment Quiz"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnViewDeleteInfo"
+                    app:layout_constraintTop_toTopOf="@+id/btnViewDeleteInfo" />
+
+                <View
+                    android:id="@+id/viewAvatarDivide1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintBottom_toTopOf="@+id/lblViewCategory2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblViewAid" />
+
+                <View
+                    android:id="@+id/viewAvatarDividerVertical1"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintBottom_toTopOf="@+id/viewAvatarDivide2"
+                    app:layout_constraintEnd_toStartOf="@+id/lblViewTopic3"
+                    app:layout_constraintStart_toEndOf="@+id/lblViewTopic1"
+                    app:layout_constraintTop_toBottomOf="@+id/viewAvatarDivide1" />
+
+                <View
+                    android:id="@+id/viewAvatarDivide2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintBottom_toTopOf="@+id/btnNavUpdateFromView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblViewTopic2Ans" />
+
+                <TextView
+                    android:id="@+id/txtViewAvaMessage"
+                    android:layout_width="105dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="4dp"
+                    android:textColor="#F44336"
+                    app:layout_constraintStart_toEndOf="@+id/lblViewTop"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6D00BCD4"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/viewMainLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnViewNavOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:onClick="gotoAvaList"
+                android:text="Go to\nAvatar List"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnViewNavTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:onClick="gotoDashboard"
+                android:text="Go to\nDashboard"
+                app:layout_constraintStart_toEndOf="@+id/btnViewNavOne"
+                app:layout_constraintTop_toTopOf="@+id/btnViewNavOne" />
+
+            <Button
+                android:id="@+id/btnViewNavThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:onClick="gotoAllAssess"
+                android:text="View all\nAssessments"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnViewNavTwo"
+                app:layout_constraintTop_toTopOf="@+id/btnViewNavTwo" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

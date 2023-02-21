@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Assessment_Quiz">
+
+        <LinearLayout
+            android:id="@+id/topContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#6D00BCD4"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topInnerConstraint1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/pageTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="100dp"
+                    android:text="Assessment Quiz"
+                    android:textSize="19sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mainContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:background="#00000000"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topContent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="420dp">
+
+            <TextView
+                android:id="@+id/assessQuizMainContentText"
+                android:layout_width="372dp"
+                android:layout_height="105dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="16dp"
+                android:text="Here is an awesome women named Chloe.  In this diaray, we are reflecting on her dating experience with this person.  We want to find the right words to best describe her feelings, emotions, and the situations that happened during the interaction with this person. \nLet's start!"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/section1"
+                android:layout_width="220dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="4dp"
+                android:text="Chloe's thinking of when she dated with Teddy Bear."
+                android:textColor="#3F51B5"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/assessQuizMainContentText"
+                app:layout_constraintTop_toBottomOf="@+id/assessQuizMainContentText" />
+
+            <TextView
+                android:id="@+id/section2"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Did she like how he treated her? "
+                android:textColor="#FF5722"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/section1"
+                app:layout_constraintTop_toBottomOf="@+id/section1" />
+
+            <fragment
+                android:id="@+id/fragmentPositiveNegative"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="160dp"
+                android:layout_marginTop="8dp"
+                app:defaultNavHost="true"
+                app:layout_constraintEnd_toEndOf="@+id/assessQuizMainContentText"
+                app:layout_constraintStart_toStartOf="@+id/section2"
+                app:layout_constraintTop_toBottomOf="@+id/assessQuizDiv2"
+                app:navGraph="@navigation/navigation_graph" />
+
+            <Button
+                android:id="@+id/btnSubmitExit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="2dp"
+                android:onClick="saveAndExitToViewAvatar"
+                android:text="Save this, \nFinish the Rest Later!"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragmentPositiveNegative" />
+
+            <Button
+                android:id="@+id/btnSubmitNextQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="#8000BCD4"
+                android:onClick="saveTakeNextQuestion"
+                android:text="Submit This >> Go to \nNext Question!"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnSubmitExit" />
+
+            <View
+                android:id="@+id/assessQuizDiv1"
+                android:layout_width="404dp"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/assessQuizMainContentText" />
+
+            <View
+                android:id="@+id/assessQuizDiv2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rdoGroupYesNoAnswer" />
+
+            <View
+                android:id="@+id/assessQuizDiv3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="2dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toTopOf="@+id/btnSubmitExit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/rdoGroupYesNoAnswer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/section2"
+                app:layout_constraintTop_toTopOf="@+id/section1">
+
+                <RadioButton
+                    android:id="@+id/rdoOptionYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:textSize="11sp" />
+
+                <RadioButton
+                    android:id="@+id/rdoOptionNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:textSize="11sp" />
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomContent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:background="#7E00BCD4"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mainContent"
+            app:layout_constraintVertical_bias="0.0" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dashBottomInner1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pageTitle">
+
+                <Button
+                    android:id="@+id/navDash"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:onClick="gotoDashboard"
+                    android:text="Back to\nDashboard"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/navAvList"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:onClick="gotoAvaList"
+                    android:text="Avatar \nList"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/navDash"
+                    app:layout_constraintTop_toTopOf="@+id/navDash" />
+
+                <Button
+                    android:id="@+id/navViewAss"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:onClick="gotoAllAssess"
+                    android:text="View All\nAssessment"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/navAvList"
+                    app:layout_constraintTop_toTopOf="@+id/navAvList" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

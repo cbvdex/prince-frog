@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "317874643519",
+    "firebase_url": "https://frogprince-b52bd.firebaseio.com",
+    "project_id": "frogprince-b52bd",
+    "storage_bucket": "frogprince-b52bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317874643519:android:03b53ba8330785d8dc0e8a",
+        "android_client_info": {
+          "package_name": "com.example.frogprince"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317874643519-bqhro83cq3lv6m6tveu95j32cn0b9ncn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.frogprince",
+            "certificate_hash": "05355b055d1c596bcea0b4f67e528e5f857d5ef0"
+          }
+        },
+        {
+          "client_id": "317874643519-6vj03npq5f2nagmn06j9h560s6vtihti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPl347lsrAvnx1ONaJVU699U3N1IdAC6U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317874643519-6vj03npq5f2nagmn06j9h560s6vtihti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CreateAvatar">
+
+    <LinearLayout
+        android:id="@+id/createTopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6D00BCD4"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lblCreateTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Create Avatar"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/createMainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/createTopLayout">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/lblCreateTop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Create an Experience Avatar!"
+                    android:textColor="#E91E63"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/lblCreateCategory1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Reminder Information"
+                    android:textColor="#673AB7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCreateTop" />
+
+                <TextView
+                    android:id="@+id/lblCreateNickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Nickname:"
+                    app:layout_constraintStart_toStartOf="@+id/lblCreateCategory1"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCreateCategory1" />
+
+                <TextView
+                    android:id="@+id/lblCreatePhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Phone #:\n(Optional)"
+                    app:layout_constraintStart_toStartOf="@+id/lblCreateNickname"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCreateNickname" />
+
+                <TextView
+                    android:id="@+id/lblCreateAid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Memory Aid (hint):"
+                    app:layout_constraintStart_toStartOf="@+id/lblCreatePhone"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCreatePhone" />
+
+                <Button
+                    android:id="@+id/btnCreatePhoneSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:onClick="selectPhone"
+                    android:text="Phone #\nSearch"
+                    app:layout_constraintStart_toEndOf="@+id/txtCreatePhone"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCreateNickname" />
+
+                <EditText
+                    android:id="@+id/txtCreateNickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    app:layout_constraintStart_toEndOf="@+id/lblCreateNickname"
+                    app:layout_constraintTop_toTopOf="@+id/lblCreateNickname" />
+
+                <EditText
+                    android:id="@+id/txtCreatePhone"
+                    android:layout_width="195dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    app:layout_constraintStart_toEndOf="@+id/lblCreatePhone"
+                    app:layout_constraintTop_toTopOf="@+id/lblCreatePhone" />
+
+                <EditText
+                    android:id="@+id/txtCreateAid"
+                    android:layout_width="226dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/lblCreateAid"
+                    app:layout_constraintTop_toTopOf="@+id/lblCreateAid" />
+
+                <TextView
+                    android:id="@+id/lblCreateReminderImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Reminder Image (optional)"
+                    android:textColor="#673AB7"
+                    app:layout_constraintStart_toStartOf="@+id/lblCreateCategory1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCreateAid" />
+
+                <ImageButton
+                    android:id="@+id/imgCreate"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="@+id/lblCreateReminderImg"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCreateReminderImg"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <Button
+                    android:id="@+id/btnCreateSelectPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:onClick="selectPhoto"
+                    android:text="Select \nphoto"
+                    app:layout_constraintStart_toEndOf="@+id/imgCreate"
+                    app:layout_constraintTop_toTopOf="@+id/imgCreate" />
+
+                <TextView
+                    android:id="@+id/lblCreatePhotoGuide"
+                    android:layout_width="189dp"
+                    android:layout_height="58dp"
+                    android:layout_marginStart="8dp"
+                    android:text="You can select any image which helps you recall \nthe person."
+                    app:layout_constraintStart_toEndOf="@+id/btnCreateSelectPhoto"
+                    app:layout_constraintTop_toTopOf="@+id/btnCreateSelectPhoto" />
+
+                <TextView
+                    android:id="@+id/lblCreateAction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Choose"
+                    android:textColor="#673AB7"
+                    app:layout_constraintStart_toStartOf="@+id/imgCreate"
+                    app:layout_constraintTop_toBottomOf="@+id/imgCreate" />
+
+                <Button
+                    android:id="@+id/btnCreateSaveOnly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:onClick="createAvatarQuizLater"
+                    android:text="Save the Avatar,\nQuiz Later!"
+                    app:layout_constraintStart_toEndOf="@+id/lblCreateAction"
+                    app:layout_constraintTop_toBottomOf="@+id/imgCreate" />
+
+                <Button
+                    android:id="@+id/btnCreateSaveQuiz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:onClick="createAvatarTakeQuiz"
+                    android:text="Save the Avatar,\nTake Quiz Now!"
+                    app:layout_constraintStart_toEndOf="@+id/btnCreateSaveOnly"
+                    app:layout_constraintTop_toTopOf="@+id/btnCreateSaveOnly" />
+
+                <TextView
+                    android:id="@+id/txtPhotoLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintStart_toEndOf="@+id/imgCreate"
+                    app:layout_constraintTop_toBottomOf="@+id/btnCreateSelectPhoto" />
+
+                <TextView
+                    android:id="@+id/txtCreateAvaMessage"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:textColor="#F44336"
+                    app:layout_constraintStart_toEndOf="@+id/lblCreateTop"
+                    app:layout_constraintTop_toTopOf="@+id/lblCreateTop" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/createBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6D00BCD4"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/createMainLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnCreateNavOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:onClick="gotoDashboard"
+                android:text="Go to\nDashboard"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnCreateTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:onClick="gotoAvatarList"
+                android:text="View \nAvatars List"
+                app:layout_constraintEnd_toStartOf="@+id/btnCreateThree"
+                app:layout_constraintStart_toEndOf="@+id/btnCreateNavOne"
+                app:layout_constraintTop_toTopOf="@+id/btnCreateNavOne" />
+
+            <Button
+                android:id="@+id/btnCreateThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:onClick="gotoAllAssessment"
+                android:text="View all\nAssessment"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnCreateTwo" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
