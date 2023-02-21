@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    tools:context=".ui.NegativeQuestionFragment">
+
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/txtNegativeQuestion"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="What was the WORST moment with him?"
+        android:textColor="#FF5722"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constLeftNegative"
+        android:layout_width="146dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNegativeQuestion">
+
+        <RadioGroup
+            android:id="@+id/radioGroupNegativeSubQuestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/rdoNegativeOption1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 1"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rdoNegativeOption2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 2"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rdoNegativeOption3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 3"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rdoNegativeOption4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 4"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </RadioGroup>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constRightNegative"
+        android:layout_width="205dp"
+        android:layout_height="126dp"
+        app:layout_constraintBottom_toBottomOf="@+id/constLeftNegative"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constLeftNegative"
+        app:layout_constraintTop_toTopOf="@+id/constLeftNegative">
+
+        <TextView
+            android:id="@+id/lblGuideNegativeSection"
+            android:layout_width="202dp"
+            android:layout_height="43dp"
+            android:text="Select an option from the left, \nor write your own answer below."
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/txtNegativeFreeAns"
+            android:layout_width="190dp"
+            android:layout_height="69dp"
+            android:layout_marginTop="4dp"
+            android:background="#3EACAEAE"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblGuideNegativeSection" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
