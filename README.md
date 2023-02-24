@@ -47,3 +47,7 @@ The “state of mind” of the user when users use the application
 
 The added user benefits
      Information, organization, convenience, entertainment, analysis, and new experience.
+
+# More Details
+
+You can see more details in the wiki page (https://github.com/cbvdex/prince-frog/wiki).
