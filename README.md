@@ -48,6 +48,14 @@ The “state of mind” of the user when users use the application
 The added user benefits
      Information, organization, convenience, entertainment, analysis, and new experience.
 
+# Architecture
+
+Simple, effective, and backend-minimized architecture
+
+     Many non-mobile applications which have their core selling point (the “big C” content) in the “analysis of information”, often, heavily rely on the backend coding of complex database queries (i.e. “analyzing on the fly”). This old solution is not applicable to mobile apps, because mobile device has limited resources - such as the constraints of the capacity of CPU, battery, internet connectivity, and mobile data usage. Backend heavy applications using heavy “on-the-fly queries” often cause significant delay on processing, which results in the app being frozen or stopped.  This inconvenience would lead to users deleting the application.
+
+     To avoid the pitfall, this application will carefully design database tables – e.g. by breaking down topics into single tables, and by applying simple “pre-processing” of data before saving the data into the database so as to minimize the need of complex querying at the “retrieval” time. 
+
 # More Details
 
 You can see more details in the wiki page (https://github.com/cbvdex/prince-frog/wiki).
